@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "No Ctrl+P",
+  "version": "1.0.1",
+  "description": "Prevents the print dialog from opening when you press Ctrl+P or Cmd+P.",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "192": "assets/icon-192.png",
+    "512": "assets/icon-512.png"
+  }
+}
